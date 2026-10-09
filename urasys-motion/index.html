@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Urasys × Pera PDKS Hareket Seti</title>
+<link rel="stylesheet" href="motion.css">
+</head>
+<body>
+
+<header class="wrap" style="padding:48px 0 32px">
+  <div class="eyebrow">Urasys × Pera PDKS</div>
+  <h1 style="font-size:clamp(32px,6vw,56px);letter-spacing:-.03em;margin:8px 0">Ortak hareket seti</h1>
+  <p class="lead">Urasys'in siyah/amber dünyası ile Pera PDKS'in mercan kırmızısı vurgusunu tek bir hareket dilinde birleştiren logo intro, web bileşenleri ve sosyal medya sahneleri.</p>
+</header>
+
+<!-- 1) Logo intro -->
+<section class="section wrap">
+  <div class="bar-head">
+    <div><div class="eyebrow">01 · Logo intro &amp; loader</div><h2 class="title">Açılış animasyonu</h2></div>
+    <button class="btn ghost" id="replay-intro">↻ Tekrar oynat</button>
+  </div>
+  <div class="stage wide intro" id="intro">
+    <div class="grid-bg"></div>
+    <svg class="circuit" viewBox="0 0 800 450" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+      <path class="a" d="M0 120 H180 L230 170 H330 L370 210"/>
+      <path class="c" d="M800 330 H620 L570 280 H470 L430 240"/>
+      <path class="a" d="M0 330 H120 L170 380 H300"/>
+      <path class="c" d="M800 120 H700 L650 70 H520"/>
+      <circle cx="370" cy="210" r="5" fill="#ffa81f"/>
+      <circle cx="430" cy="240" r="5" fill="#f2435a"/>
+      <circle cx="300" cy="380" r="4" fill="#ffa81f"/>
+      <circle cx="520" cy="70" r="4" fill="#f2435a"/>
+    </svg>
+    <div class="center">
+      <div class="wordmark" aria-label="urasys"></div>
+      <div style="display:flex;align-items:center;gap:18px">
+        <span class="cross">×</span>
+        <div class="pera">
+          <!-- Yer tutucu işaret: resmi Pera PDKS SVG'siyle değiştirin -->
+          <svg class="pera-mark" viewBox="0 0 48 48" aria-hidden="true"><path d="M8 6h20a12 12 0 0 1 0 24H18v12H8z" fill="#f2435a"/><path d="M18 14h9a4 4 0 0 1 0 8h-9z" fill="#050507"/></svg>
+          <div class="pera-text">PERA<br>PDKS</div>
+        </div>
+      </div>
+      <div class="tagline">Güvenli · Akıllı · Entegre</div>
+    </div>
+    <div class="loader-track"><div class="loader-fill"></div></div>
+  </div>
+  <div class="loaders" aria-label="Yükleme göstergeleri">
+    <div class="ring"></div>
+    <div class="dots"><i></i><i></i><i></i></div>
+  </div>
+</section>
+
+<!-- 2) Web bileşenleri -->
+<section class="section wrap">
+  <div class="eyebrow">02 · Web animasyonları</div>
+  <h2 class="title">Kaydırınca beliren kartlar, canlı panel</h2>
+  <p class="lead">Kartlar sırayla yükselir, imleci amber bir ışık izler, ikon döner, ok kayar. Pera PDKS kartları mercan tonunda tepki verir.</p>
+
+  <div class="cards">
+    <article class="card reveal" style="--d:0">
+      <div class="icon-tile"><svg viewBox="0 0 24 24"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><path d="M12 8v4l2 2"/></svg></div>
+      <h3>Siber Güvenlik &amp; Zero Trust</h3><p>Ağ trafiğini sürekli denetleyen Sıfır Güven savunma hattı ve proaktif sızma testleri.</p>
+      <a class="more" href="#">Detaylı Bilgi <span>→</span></a>
+    </article>
+    <article class="card reveal" style="--d:1">
+      <div class="icon-tile"><svg viewBox="0 0 24 24"><path d="M3 12l5-5M3 12l5 5M21 12l-5-5M21 12l-5 5M14 5l-4 14"/></svg></div>
+      <h3>Web &amp; Yazılım Geliştirme</h3><p>Kurumsal web siteleri ve işinize özel yazılımlar; hızlı, güvenli, büyümeye hazır.</p>
+      <a class="more" href="#">Detaylı Bilgi <span>→</span></a>
+    </article>
+    <article class="card pera reveal" style="--d:2">
+      <div class="icon-tile"><svg viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20c.5-4 3-6 6.5-6s6 2 6.5 6"/><circle cx="18" cy="9" r="2.5"/></svg></div>
+      <h3>PDKS &amp; Personel Takip</h3><p>Giriş-çıkış, vardiya, izin, mola ve puantaj süreçleri tek panelde: Pera PDKS.</p>
+      <a class="more" href="#">Detaylı Bilgi <span>→</span></a>
+    </article>
+  </div>
+
+  <div class="stats reveal">
+    <div class="stat"><b data-to="500" data-suffix="+">0</b><small>Kurulum</small></div>
+    <div class="stat"><b data-to="99" data-suffix="%">0</b><small>Çalışma süresi</small></div>
+    <div class="stat"><b data-to="24" data-suffix="/7">0</b><small>Destek</small></div>
+  </div>
+
+  <div style="margin-top:36px">
+    <div class="bar-head"><h3>Pera PDKS canlı panel</h3><button class="btn coral" id="replay-dash">↻ Tekrar oynat</button></div>
+    <div class="dash" style="margin-top:14px">
+      <div>
+        <h4>Anlık hareketler</h4>
+        <div class="feed">
+          <div class="row" style="--i:0"><span><i style="background:#2f80ed;display:inline-block;margin-right:8px"></i>Montaj <em>Kartlı geçiş</em></span><em>09:12</em></div>
+          <div class="row" style="--i:1"><span><i style="background:#27ae60;display:inline-block;margin-right:8px"></i>Yoğun Bakım <em>Vardiya devri</em></span><em>09:24</em></div>
+          <div class="row" style="--i:2"><span><i style="background:#f2994a;display:inline-block;margin-right:8px"></i>Ofis <em>İzin onayı</em></span><em>09:31</em></div>
+        </div>
+      </div>
+      <div>
+        <h4>Saatlik akış</h4>
+        <div class="chart">
+          <i style="--h:35%;--i:0"></i><i style="--h:55%;--i:1"></i><i style="--h:48%;--i:2"></i><i style="--h:80%;--i:3"></i><i style="--h:68%;--i:4"></i><i style="--h:92%;--i:5"></i>
+        </div>
+        <span class="badge-live">Mola takibi güncellendi</span>
+      </div>
+    </div>
+  </div>
+
+  <div style="display:flex;gap:12px;margin-top:32px;flex-wrap:wrap">
+    <button class="btn">Teklif Talebi</button>
+    <button class="btn coral">Demo için tıklayınız</button>
+  </div>
+</section>
+
+<!-- 3) Sosyal medya / sunum -->
+<section class="section wrap">
+  <div class="bar-head">
+    <div><div class="eyebrow">03 · Sosyal medya &amp; sunum</div><h2 class="title">1080×1080 döngü sahnesi</h2></div>
+    <button class="btn ghost" id="replay-social">↻ Baştan</button>
+  </div>
+  <p class="lead">Dört sahnelik, ~14 saniyelik döngü. Instagram/LinkedIn gönderisi veya sunum geçişi olarak ekran kaydı alınabilir.</p>
+  <div class="stage square social" id="social">
+    <div class="grid-bg"></div>
+
+    <div class="scene">
+      <h3><span class="line" style="--i:0">Personel takibi</span><span class="line hl" style="--i:1">tek panelde.</span></h3>
+      <p class="line" style="--i:3">Giriş-çıkış, vardiya, izin, puantaj</p>
+    </div>
+
+    <div class="scene">
+      <div class="mini-bars">
+        <i style="height:35%;--i:0"></i><i style="height:60%;--i:1"></i><i style="height:48%;--i:2"></i><i style="height:82%;--i:3"></i><i style="height:70%;--i:4"></i><i style="height:100%;--i:5"></i>
+      </div>
+      <h3><span class="line" style="--i:1">Anlık <span class="hc">raporlama</span></span></h3>
+      <div class="chip-row"><span class="chip c" style="--i:0">Mola takibi</span><span class="chip c" style="--i:1">Turnike</span><span class="chip c" style="--i:2">Puantaj</span></div>
+    </div>
+
+    <div class="scene">
+      <div class="pair line" style="--i:0"><span class="u"><b>urasys</b>.</span><span class="x">×</span><span class="p">PERA PDKS</span></div>
+      <h3><span class="line" style="--i:2">İş ortaklığıyla</span><span class="line hl" style="--i:3">daha güçlü.</span></h3>
+    </div>
+
+    <div class="scene">
+      <h3><span class="line" style="--i:0">Hemen <span class="hl">teklif</span></span><span class="line" style="--i:1">alın.</span></h3>
+      <div class="chip-row"><span class="chip a" style="--i:0">urasys.com</span><span class="chip c" style="--i:1">perapdks.com</span></div>
+    </div>
+
+    <div class="progress"></div>
+  </div>
+</section>
+
+<footer class="wrap">
+  Renkler ve logo işaretleri yer tutucudur; resmi HEX kodları ve SVG'ler için <code>motion.css</code> içindeki <code>:root</code> bloğunu ve intro SVG'lerini güncelleyin.
+</footer>
+
+<script src="motion.js"></script>
+</body>
+</html>
