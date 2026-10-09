@@ -1,0 +1,48 @@
+<!doctype html><html lang="tr"><head><meta charset="utf-8"><link rel="stylesheet" href="base.css">
+<style>
+.lang{position:relative;width:920px;height:330px}
+.lang .w{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;opacity:0;animation:wd 1.5s ease var(--s) both}
+.lang .w b{font-size:150px;font-weight:800;letter-spacing:-4px;color:#fff}
+.lang .w small{font-size:38px;color:#93b4ff;font-weight:600}
+@keyframes wd{0%{opacity:0;transform:translateY(40px)}15%,80%{opacity:1;transform:none}100%{opacity:0;transform:translateY(-40px)}}
+.chips{display:flex;flex-wrap:wrap;gap:16px;justify-content:center;width:920px}
+.chips .c{padding:16px 34px;border-radius:99px;border:3px solid rgba(255,255,255,.25);color:#c7d6ff;font-size:36px;font-weight:700;animation:pop .5s ease var(--s) both,lit 1.5s ease var(--l) both}
+@keyframes lit{0%{background:transparent;color:#c7d6ff;border-color:rgba(255,255,255,.25)}15%,80%{background:#fff;color:var(--navy);border-color:#fff}100%{background:transparent;color:#c7d6ff;border-color:rgba(255,255,255,.25)}}
+.log{width:920px;padding:20px 44px}
+.lg{display:flex;align-items:center;gap:22px;padding:24px 0;border-bottom:2px solid var(--line);font-size:34px;text-align:left}
+.lg:last-child{border:0}.lg b{flex:1;color:var(--navy2)}.lg span.t{color:var(--muted);font-size:28px;font-weight:600}
+.badges{display:flex;gap:20px}
+</style></head><body><div class="stage">
+
+<div class="scene dark" style="--s:0s;--d:.01s;--e:12.6s;gap:40px">
+ <h1 class="h1 a" style="--s:.2s;font-size:84px">Ekibiniz kendi<br><span class="hl">dilinde</span> çalışsın.</h1>
+ <div class="lang" id="lang"></div>
+ <div class="chips" id="chips"></div>
+ <p class="p a" style="--s:1s">Uluslararası ekipler için 6 dil desteği.</p>
+</div>
+
+<div class="scene" style="--s:12.1s;--e:21.4s;gap:36px">
+ <div class="pill a" style="--s:12.4s"><span data-ic="shield"></span> DENETİM GÜNLÜĞÜ</div>
+ <h2 class="h2 a" style="--s:12.6s">Her işlem<br>kayıt altında.</h2>
+ <div class="card log a" style="--s:13s">
+  <div class="lg a left" style="--s:13.5s"><span class="ico" data-ic="file" style="width:70px;height:70px;font-size:36px"></span><b>Belge yüklendi</b><span class="t">09:41</span></div>
+  <div class="lg a left" style="--s:14.2s"><span class="ico" data-ic="task" style="width:70px;height:70px;font-size:36px"></span><b>Görev tamamlandı</b><span class="t">10:05</span></div>
+  <div class="lg a left" style="--s:14.9s"><span class="ico" data-ic="dollar" style="width:70px;height:70px;font-size:36px"></span><b>Masraf onaylandı</b><span class="t">10:27</span></div>
+ </div>
+ <div class="badges a" style="--s:16s"><span class="chip g">KVKK uyumlu</span><span class="chip g">GDPR uyumlu</span></div>
+ <p class="p a" style="--s:16.6s">Güvenlik ve şeffaflık için detaylı<br>kullanıcı işlem kayıtları.</p>
+</div>
+
+<div class="scene dark" style="--s:20.9s">
+ <h1 class="h1 a" style="--s:21.4s">Güvenle büyüyen<br><span class="hl">ekipler için.</span></h1>
+ <div class="btn a pop" style="--s:22.6s">Ücretsiz Başla <span data-ic="arrow"></span></div>
+ <div class="url a" style="--s:23.2s">yonetior.com</div>
+</div>
+</div>
+<script>
+const L=[['Merhaba','Türkçe'],['Hello','English'],['Hallo','Deutsch'],['Hola','Español'],['Bonjour','Français'],['Ciao','Italiano']];
+const lang=document.getElementById('lang'),chips=document.getElementById('chips');
+L.forEach((l,i)=>{const st=1.6+i*1.7;
+ lang.insertAdjacentHTML('beforeend',`<div class="w" style="--s:${st}s"><b>${l[0]}</b><small>${l[1]}</small></div>`);
+ chips.insertAdjacentHTML('beforeend',`<div class="c" style="--s:${1.2+i*.12}s;--l:${st}s">${l[1]}</div>`)});
+window.DURATION=25.7</script><script src="base.js"></script></body></html>

@@ -1,0 +1,51 @@
+<!doctype html><html lang="tr"><head><meta charset="utf-8"><link rel="stylesheet" href="base.css">
+<style>
+.phone{width:660px;height:960px;border-radius:84px;border:16px solid #0f172a;background:#e7eef7;overflow:hidden;box-shadow:0 50px 100px -40px rgba(23,37,84,.6);display:flex;flex-direction:column;position:relative}
+.top{background:#2563eb;color:#fff;padding:34px 30px;display:flex;align-items:center;gap:20px;font-weight:700;font-size:34px}
+.top .av{width:68px;height:68px;border-radius:50%;background:#fff;color:var(--navy);display:flex;align-items:center;justify-content:center;font-size:36px}
+.top small{display:block;font-weight:500;font-size:22px;opacity:.8}
+.chat{flex:1;padding:26px 24px;display:flex;flex-direction:column;gap:20px;position:relative}
+.b{max-width:470px;padding:22px 26px;border-radius:30px;font-size:30px;line-height:1.3;text-align:left;font-weight:500}
+.o{align-self:flex-end;background:#2563eb;color:#fff;border-bottom-right-radius:8px}
+.i{align-self:flex-start;background:#fff;color:var(--ink);border-bottom-left-radius:8px}
+.photo{width:260px;background:#fff;border-radius:14px;padding:18px;color:#475569;font-family:'DejaVu Sans Mono',monospace;font-size:17px;text-align:left}
+.photo i{display:block;height:10px;background:#e2e8f0;border-radius:6px;margin:8px 0}
+.res{display:flex;flex-direction:column;gap:10px;font-size:27px}
+.res div{display:flex;justify-content:space-between;gap:30px}.res span{color:var(--muted)}
+.res .ok{color:#047857;font-weight:800;font-size:29px;display:flex;justify-content:flex-start;gap:10px}
+.typing{position:absolute;left:24px;bottom:26px;background:#fff;border-radius:26px;padding:24px 30px;display:flex;gap:10px;animation:fade .2s ease var(--s) both,out .2s ease var(--e) forwards}
+.typing i{width:16px;height:16px;border-radius:50%;background:#94a3b8;animation:blink 1s infinite}.typing i:nth-child(2){animation-delay:.2s}.typing i:nth-child(3){animation-delay:.4s}
+</style></head><body><div class="stage">
+
+<div class="scene dark" style="--s:0s;--d:.01s;--e:3.4s">
+ <div class="ico a pop" style="--s:.2s;width:150px;height:150px;border-radius:44px;background:#fff;font-size:90px" data-ic="send"></div>
+ <h1 class="h1 a" style="--s:.7s;font-size:88px">Makbuz fotoğrafını<br><span class="hl">Telegram'dan</span><br>gönderin.</h1>
+</div>
+
+<div class="scene" style="--s:2.9s;--e:16.2s;gap:30px;padding-top:250px">
+ <h2 class="h2 a" style="--s:3.2s;font-size:56px">Telefonunuzdan<br>doğrudan kayıt oluşturun</h2>
+ <div class="phone a pop" style="--s:3.5s">
+  <div class="top"><div class="av" data-ic="activity"></div><div>yonetior bot<small>çevrimiçi</small></div></div>
+  <div class="chat">
+   <div class="b o a right" style="--s:4.6s;padding:14px"><div class="photo"><b>MARKET A.Ş.</b><i></i><i style="width:70%"></i><i></i><b>TOPLAM 486,50</b></div></div>
+   <div class="typing" style="--s:5.8s;--e:7.2s"><i></i><i></i><i></i></div>
+   <div class="b i a left" style="--s:7.2s">
+    <div class="res"><div class="ok"><span data-ic="check" style="color:#047857"></span> Makbuz okundu</div>
+     <div><span>İşletme</span><b>Market A.Ş.</b></div><div><span>Tutar</span><b>486,50 ₺</b></div><div><span>Kayıt</span><b>Masraf oluşturuldu</b></div></div>
+   </div>
+   <div class="b o a right" style="--s:10s">Yarın müşteriye teklif gönder</div>
+   <div class="typing" style="--s:10.9s;--e:11.9s"><i></i><i></i><i></i></div>
+   <div class="b i a left" style="--s:11.9s"><div class="res"><div class="ok"><span data-ic="task" style="color:#047857"></span> Taslak görev oluşturuldu</div></div></div>
+  </div>
+ </div>
+ <p class="p a" style="--s:13s;font-size:36px">AI OCR makbuz kaydını otomatik oluşturur.<br>Mesajla da taslak görev açın.</p>
+</div>
+
+<div class="scene dark" style="--s:15.7s">
+ <h1 class="h1 a" style="--s:16.2s">Sahadaki ekibiniz<br><span class="hl">bilgisayar başında<br>olmak zorunda değil.</span></h1>
+ <div class="btn a pop" style="--s:17.6s">Ücretsiz Başla <span data-ic="arrow"></span></div>
+ <div class="url a" style="--s:18.2s">yonetior.com</div>
+</div>
+<div class="demo">Örnek veriler gösterim amaçlıdır.</div>
+</div>
+<script>window.DURATION=21.2</script><script src="base.js"></script></body></html>

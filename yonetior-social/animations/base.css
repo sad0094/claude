@@ -1,0 +1,50 @@
+*{box-sizing:border-box;margin:0;padding:0}
+:root{--navy:#1e3a8a;--navy2:#172554;--blue:#2563eb;--sky:#dbeafe;--bg:#f1f5f9;--ink:#0f172a;--muted:#64748b;--line:#e2e8f0;--green:#10b981;--amber:#f59e0b}
+html,body{width:1080px;height:1920px;overflow:hidden;font-family:Inter,'Inter Display',sans-serif;background:var(--bg);color:var(--ink)}
+.stage{position:relative;width:1080px;height:1920px;overflow:hidden}
+
+/* sahneler: --s giriş, --e çıkış (sn) */
+.scene{position:absolute;inset:0;padding:270px 80px 420px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:44px;
+ background:radial-gradient(900px 700px at 85% 5%,#e0ecff 0,transparent 60%),var(--bg);
+ animation:fade var(--d,.5s) ease var(--s,0s) both,out .5s ease var(--e,9999s) forwards}
+.scene.dark{color:#fff;background:radial-gradient(900px 800px at 90% 0,#3b6cf0 0,transparent 60%),linear-gradient(165deg,var(--navy2),var(--navy))}
+
+/* öğe animasyonları */
+.a{animation:var(--fx,up) var(--d,.7s) cubic-bezier(.2,.8,.2,1) var(--s,0s) both,out .5s ease var(--e,9999s) forwards}
+.pop{--fx:pop}.left{--fx:left}.right{--fx:right}.fade{--fx:fade}
+@keyframes up{from{opacity:0;transform:translateY(50px)}to{opacity:1;transform:none}}
+@keyframes left{from{opacity:0;transform:translateX(-80px)}to{opacity:1;transform:none}}
+@keyframes right{from{opacity:0;transform:translateX(80px)}to{opacity:1;transform:none}}
+@keyframes fade{from{opacity:0}to{opacity:1}}
+@keyframes pop{0%{opacity:0;transform:scale(.6)}65%{opacity:1;transform:scale(1.08)}100%{opacity:1;transform:scale(1)}}
+@keyframes out{to{opacity:0}}
+@keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.06)}}
+@keyframes blink{0%,100%{opacity:.25}50%{opacity:1}}
+
+/* tipografi */
+.h1{font-size:98px;line-height:1.04;font-weight:800;letter-spacing:-2.5px}
+.h2{font-size:70px;line-height:1.08;font-weight:800;letter-spacing:-1.5px;color:var(--navy2)}
+.dark .h2{color:#fff}
+.p{font-size:40px;line-height:1.35;color:var(--muted);font-weight:500}
+.dark .p{color:#c7d6ff}
+.pill{display:inline-flex;align-items:center;gap:12px;padding:14px 30px;border-radius:99px;background:var(--sky);color:var(--navy);font-weight:700;font-size:30px;letter-spacing:1px}
+.dark .pill{background:rgba(255,255,255,.14);color:#fff}
+.hl{color:#93b4ff}
+.light .hl,.scene:not(.dark) .hl{color:var(--blue)}
+
+/* bileşenler */
+.card{background:#fff;border:2px solid var(--line);border-radius:44px;box-shadow:0 30px 70px -30px rgba(23,37,84,.35);padding:44px}
+.row{display:flex;align-items:center;gap:26px}
+.ico{display:inline-flex;align-items:center;justify-content:center;width:84px;height:84px;border-radius:24px;background:var(--sky);color:var(--navy);font-size:44px;flex:none}
+.ico.g{background:#d1fae5;color:#047857}
+.chip{display:inline-block;padding:10px 24px;border-radius:99px;background:var(--sky);color:var(--navy);font-weight:700;font-size:30px}
+.chip.g{background:#d1fae5;color:#047857}
+.btn{display:inline-flex;align-items:center;gap:16px;padding:36px 80px;border-radius:99px;background:#fff;color:var(--navy);font-weight:800;font-size:54px;box-shadow:0 24px 60px -20px rgba(0,0,0,.5)}
+.dots{display:flex;gap:16px}.dots i{width:70px;height:12px;border-radius:9px;background:#cbd5e1}.dots i.on{background:var(--navy)}
+.brand{position:absolute;top:150px;left:0;right:0;display:flex;justify-content:center;align-items:center;gap:16px;font-weight:800;font-size:54px;letter-spacing:-1.5px;color:var(--navy)}
+.dark .brand{color:#fff}
+.url{font-size:44px;font-weight:700;color:#c7d6ff;letter-spacing:.5px}
+.demo{position:absolute;bottom:370px;left:0;right:0;text-align:center;font-size:24px;color:#94a3b8;font-weight:500}
+.dark .demo{color:#8ea6e6}
+.type{display:inline-block;white-space:nowrap;clip-path:inset(0 100% 0 0);animation:typing var(--td,1.2s) steps(var(--n,12),end) var(--s,0s) both}
+@keyframes typing{to{clip-path:inset(0 0 0 0)}}

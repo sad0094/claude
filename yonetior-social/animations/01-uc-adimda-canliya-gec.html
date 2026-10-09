@@ -1,0 +1,69 @@
+<!doctype html><html lang="tr"><head><meta charset="utf-8"><link rel="stylesheet" href="base.css">
+<style>
+.field{width:100%;text-align:left}.field small{display:block;font-size:26px;color:var(--muted);font-weight:600;margin-bottom:10px}
+.field div{border:2px solid var(--line);border-radius:22px;padding:26px 30px;font-size:42px;font-weight:600;background:#f8fafc}
+.ok{width:120px;height:120px;border-radius:50%;background:var(--green);color:#fff;display:flex;align-items:center;justify-content:center;font-size:70px}
+.member{width:100%;display:flex;align-items:center;gap:26px;padding:26px 0;border-bottom:2px solid var(--line)}
+.member:last-child{border:0}
+.av{width:90px;height:90px;border-radius:50%;background:var(--navy);color:#fff;font-weight:800;font-size:38px;display:flex;align-items:center;justify-content:center}
+.member b{font-size:40px;text-align:left;flex:1}
+.hub{position:relative;width:900px;height:900px}
+.hub .c{position:absolute;left:50%;top:50%;width:200px;height:200px;margin:-100px;border-radius:50%;background:var(--navy);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:40px;animation:pop .7s cubic-bezier(.2,.8,.2,1) var(--s) both,pulse 2s ease-in-out calc(var(--s) + 1s) infinite}
+.hub .n{position:absolute;left:50%;top:50%;width:190px;margin:-95px;text-align:center;font-weight:700;font-size:34px;color:var(--navy2)}
+.hub .n span{display:flex;margin:0 auto 10px;width:130px;height:130px;border-radius:50%;background:#fff;border:3px solid var(--sky);color:var(--navy);font-size:64px;align-items:center;justify-content:center;box-shadow:0 20px 40px -20px rgba(23,37,84,.4)}
+.ln{position:absolute;left:50%;top:50%;height:6px;width:290px;margin-top:-3px;background:linear-gradient(90deg,var(--navy),#93b4ff);border-radius:4px;transform-origin:0 50%;animation:grow .6s ease var(--s) both}
+@keyframes grow{from{transform:rotate(var(--r)) scaleX(0)}to{transform:rotate(var(--r)) scaleX(1)}}
+</style></head><body><div class="stage">
+
+<div class="scene dark" style="--s:0s;--d:.01s;--e:3.4s">
+ <h1 class="h1 a" style="--s:.2s">Kurulum<br>haftalar<br><span class="hl">sürmesin.</span></h1>
+ <p class="p a" style="--s:1.2s">Profesyonel hizmet ekipleri için<br>iş yönetimi platformu</p>
+</div>
+
+<div class="scene" style="--s:2.9s;--e:8.5s">
+ <div class="dots a" style="--s:3.2s"><i class="on"></i><i></i><i></i></div>
+ <div class="pill a" style="--s:3.2s"><span data-ic="grid"></span> ADIM 1</div>
+ <h2 class="h2 a" style="--s:3.4s">Çalışma alanınızı<br>oluşturun</h2>
+ <div class="card a" style="--s:3.8s;width:920px;display:flex;flex-direction:column;gap:30px;align-items:center">
+  <div class="field"><small>Ofis adı</small><div><span class="type" style="--s:4.4s;--n:17;--td:1.3s">Atlas Danışmanlık</span></div></div>
+  <div class="field"><small>Para birimi</small><div class="a left" style="--s:5.9s">TRY (₺)</div></div>
+  <div class="ok a pop" style="--s:6.9s" data-ic="check" data-sz="70px"></div>
+ </div>
+ <p class="p a" style="--s:7s;margin-top:-10px">Ofis bilgilerinizi girin, temel ayarları tamamlayın.</p>
+</div>
+
+<div class="scene" style="--s:8s;--e:13.6s">
+ <div class="dots a" style="--s:8.3s"><i></i><i class="on"></i><i></i></div>
+ <div class="pill a" style="--s:8.3s"><span data-ic="userplus"></span> ADIM 2</div>
+ <h2 class="h2 a" style="--s:8.5s">Ekibinizi<br>davet edin</h2>
+ <div class="card a" style="--s:8.9s;width:920px;padding:20px 44px">
+  <div class="member a right" style="--s:9.4s"><div class="av">EK</div><b>Elif K.</b><span class="chip">Yönetici</span></div>
+  <div class="member a right" style="--s:10.2s"><div class="av" style="background:#0e7490">MY</div><b>Mehmet Y.</b><span class="chip">Muhasebe</span></div>
+  <div class="member a right" style="--s:11s"><div class="av" style="background:#6d28d9">AD</div><b>Ayşe D.</b><span class="chip">Danışman</span></div>
+ </div>
+ <p class="p a" style="--s:11.8s">Rolleri belirleyin, erişimleri netleştirin<br>ve işi doğru kişilere yönlendirin.</p>
+</div>
+
+<div class="scene" style="--s:13.1s;--e:19s">
+ <div class="dots a" style="--s:13.4s"><i></i><i></i><i class="on"></i></div>
+ <div class="pill a" style="--s:13.4s"><span data-ic="activity"></span> ADIM 3</div>
+ <h2 class="h2 a" style="--s:13.6s">İşi tek akışta<br>yönetin</h2>
+ <div class="hub" style="transform:scale(.92);margin-top:-30px">
+  <div class="ln" style="--r:-90deg;--s:14.3s"></div><div class="ln" style="--r:-18deg;--s:14.6s"></div><div class="ln" style="--r:54deg;--s:14.9s"></div><div class="ln" style="--r:126deg;--s:15.2s"></div><div class="ln" style="--r:198deg;--s:15.5s"></div>
+  <div class="c" style="--s:14s">yonetior</div>
+  <div class="n a pop" style="--s:14.6s;left:50%;top:calc(50% - 290px)"><span data-ic="users"></span>Müşteri</div>
+  <div class="n a pop" style="--s:14.9s;left:calc(50% + 276px);top:calc(50% + -90px)"><span data-ic="folder"></span>Proje</div>
+  <div class="n a pop" style="--s:15.2s;left:calc(50% + 170px);top:calc(50% + 235px)"><span data-ic="task"></span>Görev</div>
+  <div class="n a pop" style="--s:15.5s;left:calc(50% + -170px);top:calc(50% + 235px)"><span data-ic="file"></span>Belge</div>
+  <div class="n a pop" style="--s:15.8s;left:calc(50% + -276px);top:calc(50% + -90px)"><span data-ic="dollar"></span>Masraf</div>
+ </div>
+ <p class="p a" style="--s:16.2s;margin-top:-20px">Müşteri, proje, görev, belge ve masraf<br>süreçlerini tek yerden yürütün.</p>
+</div>
+
+<div class="scene dark" style="--s:18.5s">
+ <h1 class="h1 a" style="--s:19s">Dakikalar içinde<br><span class="hl">çalışmaya başlayın.</span></h1>
+ <div class="btn a pop" style="--s:20s">Ücretsiz Başla <span data-ic="arrow"></span></div>
+ <div class="url a" style="--s:20.6s">yonetior.com</div>
+</div>
+</div>
+<script>window.DURATION=23.5</script><script src="base.js"></script></body></html>
