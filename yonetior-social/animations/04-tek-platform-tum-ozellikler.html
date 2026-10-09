@@ -1,0 +1,32 @@
+<!doctype html><html lang="tr"><head><meta charset="utf-8"><link rel="stylesheet" href="base.css">
+<style>
+.grid{display:grid;grid-template-columns:repeat(3,290px);gap:16px;justify-content:center}
+.t{height:140px;background:#fff;border:2px solid var(--line);border-radius:34px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;font-weight:700;font-size:26px;color:var(--navy2);line-height:1.15;box-shadow:0 18px 40px -26px rgba(23,37,84,.5);padding:0 14px;animation:pop .55s cubic-bezier(.2,.8,.2,1) var(--s) both,glow 1.2s ease var(--g) both}
+.t span{font-size:44px;color:var(--blue);display:flex}
+@keyframes glow{0%{background:#fff}40%{background:var(--sky)}100%{background:#fff}}
+.t.w{grid-column:span 3;flex-direction:row;gap:24px;background:var(--navy);color:#fff;border:0}
+.t.w span{color:#93b4ff}
+</style></head><body><div class="stage">
+
+<div class="scene dark" style="--s:0s;--d:.01s;--e:3.4s">
+ <h1 class="h1 a" style="--s:.2s">Müşteri, proje,<br>görev, masraf,<br>fatura…</h1>
+ <h1 class="h1 a hl" style="--s:1.4s">Hepsi ayrı<br>araçta mı?</h1>
+</div>
+
+<div class="scene" style="--s:2.9s;--e:15.3s;gap:30px;padding:300px 80px 0;justify-content:flex-start">
+ <h2 class="h2 a" style="--s:3.2s;font-size:56px">Profesyonel hizmet ekipleri için<br><span style="color:var(--blue)">tek platform</span></h2>
+ <div class="grid" id="g"></div>
+</div>
+
+<div class="scene dark" style="--s:14.8s">
+ <h1 class="h1 a" style="--s:15.3s">Operasyonu<br>sadeleştirin.<br><span class="hl">Görünürlük kazanın.</span></h1>
+ <div class="btn a pop" style="--s:16.8s">Ücretsiz Başla <span data-ic="arrow"></span></div>
+ <div class="url a" style="--s:17.4s">yonetior.com</div>
+</div>
+</div>
+<script>
+const F=[['scan','AI Makbuz Okuma'],['dollar','Masraf Takibi'],['book','Müşteri Mali Takibi'],['folder','Proje Yönetimi'],['chart','Kontrol Paneli ve Raporlar'],['users','Müşteri Yönetimi'],['task','Görev Yönetimi'],['clock','Zaman Takibi'],['send','Telegram Entegrasyonu'],['cal','Takvim ve Hatırlatmalar'],['bell','Anlık Bildirimler'],['file','Faturalama'],['folder','Belge Yönetimi'],['globe','6 Dil Desteği'],['shield','Denetim Günlüğü'],['msg','Notlar'],['cog','Özel Proje Alanları']];
+const g=document.getElementById('g');
+F.forEach((f,i)=>{const d=document.createElement('div');d.className='t';d.style.setProperty('--s',(3.7+i*.5)+'s');d.style.setProperty('--g',(3.7+i*.5+.4)+'s');d.innerHTML=`<span data-ic="${f[0]}"></span>${f[1]}`;g.appendChild(d)});
+const w=document.createElement('div');w.className='t w';w.style.setProperty('--s','12.4s');w.style.setProperty('--g','12.8s');w.innerHTML='<span data-ic="check"></span>Hepsi tek yerde';g.appendChild(w);
+window.DURATION=20.3</script><script src="base.js"></script></body></html>
